@@ -1,0 +1,74 @@
+/* =============
+    Search
+============= */
+#search {
+	background-color: $brightStarLite;
+	display: grid;
+
+	@include xl {
+		grid-template-areas: ". search .";
+		grid-template-columns: auto 1200px auto;
+	}
+
+	>div {
+		padding: 16px;
+
+		@include xl {
+			grid-area: search;
+			margin: 0 15px;
+		}
+
+		form {
+			display: flex;
+
+			input {
+				background-color: transparent;
+				border: none;
+				border-bottom: 1px solid $stoneSilver;
+				color: $stoneSilver;
+				width: 80%;
+
+				@include md {
+					font-size: rem-calc(30);
+					font-weight: 300;
+					width: 90%;
+				}
+
+				@include lg {
+					font-size: rem-calc(35);
+				}
+
+				&::placeholder {
+					/* Chrome, Firefox, Opera, Safari 10.1+ */
+					color: $stoneSilver;
+					/* Firefox */
+					opacity: 1;
+				}
+
+				&:-ms-input-placeholder {
+					/* Internet Explorer 10-11 */
+					color: $stoneSilver;
+				}
+
+				&::-ms-input-placeholder {
+					/* Microsoft Edge */
+					color: $stoneSilver;
+				}
+			}
+
+			button {
+				background-color: $electricYellow;
+				border: none;
+				border-radius: 3.5px;
+				font-size: rem-calc(30);
+				margin-left: 10px;
+				padding: 10px 15px;
+
+				&hover {
+					background-color: $black;
+					color: $white;
+				}
+			}
+		}
+	}
+}

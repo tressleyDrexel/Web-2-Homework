@@ -1,0 +1,76 @@
+/* =============
+    Hero 2
+============= */
+#hero-2 {
+	@include xl-hero-2 {
+		display: grid;
+		grid-template-areas: ". hero-2 .";
+		grid-template-columns: auto 1350px auto;
+	}
+
+	>div {
+		@include xl {
+			grid-area: hero-2;
+		}
+
+		ul {
+			@include md {
+				display: grid;
+				grid-template-columns: 50% auto;
+			}
+
+			@include lg {
+				grid-template-columns: 60% auto;
+				padding: 0 16px;
+			}
+
+			@include xl {
+				grid-template-areas: "h1 h2"
+					"h1 h3";
+				grid-template-columns: 70% auto;
+				grid-template-rows: repeat(2, 300px);
+				padding: 0;
+			}
+
+			li {
+				background-position: center;
+				background-size: cover;
+				height: 320px;
+
+				@include md {
+					height: 500px;
+				}
+
+				@include lg {
+					height: auto;
+				}
+			}
+
+			#hero-2-1 {
+				background-image: url("../img/hero-2/hero-2-1.jpg");
+
+				@include xl {
+					grid-area: h1;
+				}
+			}
+
+			#hero-2-2 {
+				background-image: url("../img/hero-2/hero-2-2.jpg");
+
+				@include xl {
+					grid-area: h2;
+				}
+			}
+
+			#hero-2-3 {
+				background-image: url("../img/hero-2/hero-2-3.jpg");
+				display: none;
+
+				@include xl {
+					display: block;
+					grid-area: h3;
+				}
+			}
+		}
+	}
+}
