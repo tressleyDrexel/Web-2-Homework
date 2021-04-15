@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34127",
   "files" : {
+    "\/.gitignore" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/.gitignore",
+      "oF" : 0
+    },
     "\/deploy\/css\/styles.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -86,19 +94,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/new\/gallery-1 (1).jpg" : {
-      "ft" : 16384,
-      "iS" : 30664,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/new\/gallery-1 (1).jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/deploy\/img\/new\/gallery-1.jpg" : {
       "ft" : 16384,
       "iS" : 58858,
@@ -118,19 +113,6 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/img\/new\/gallery-2.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/deploy\/img\/new\/gallery-3 (1).jpg" : {
-      "ft" : 16384,
-      "iS" : 50712,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/new\/gallery-3 (1).jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -190,6 +172,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/planning\/planning-left.png" : {
+      "ft" : 32768,
+      "iS" : 20481,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/planning\/planning-left.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/img\/planning\/planning-right.jpg" : {
       "ft" : 16384,
       "iS" : 10265,
@@ -203,12 +198,33 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/planning\/planning-right.png" : {
+      "ft" : 32768,
+      "iS" : 24324,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/planning\/planning-right.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/index.html",
+      "oF" : 0
+    },
+    "\/design\/Grid Design.sketch" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/design\/Grid Design.sketch",
       "oF" : 0
     },
     "\/dev\/content\/hero-2.kit" : {
@@ -442,76 +458,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/dev\/scss\/sections\/_hero-2.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_hero-2.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/dev\/scss\/sections\/_hero.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_hero.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/dev\/scss\/sections\/_new.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_new.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/dev\/scss\/sections\/_planning.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_planning.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/dev\/scss\/sections\/_search.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_search.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
     "\/dev\/scss\/styles.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -537,7 +483,7 @@
     "creationDate" : 638646927.49306905,
     "displayValue" : "Web-2-Homework",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "meme-fry",
+    "iconImageName" : "meme-chloe",
     "iconImageWasSetByUser" : 1
   },
   "projectSettings" : {
