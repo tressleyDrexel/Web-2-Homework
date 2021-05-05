@@ -352,6 +352,14 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
 /* =============
     Typography
 ============= */
@@ -383,101 +391,37 @@ textarea {
 /* =============
     Navigation
 ============= */
-a {
-  text-decoration: none;
-  transition: 0.25s;
-}
-
 /* =============
     Header
 ============= */
 header {
   display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header .";
 }
-@media (min-width: 1200px) {
-  header {
-    grid-template-areas: ". header .";
-    grid-template-columns: auto 1200px auto;
-  }
-}
-@media (min-width: 1200px) {
-  header > div {
-    grid-area: header;
-  }
-}
-header > div section img {
-  width: 96px;
-}
-@media (min-width: 768px) {
-  header > div section img {
-    width: 123px;
-  }
-}
-@media (min-width: 1024px) {
-  header > div section img {
-    width: 150px;
-  }
+header > div {
+  grid-area: header;
 }
 
 /* =============
     Footer
 ============= */
-@media (min-width: 1200px) {
-  footer {
-    display: grid;
-    grid-template-areas: ". footer .";
-    grid-template-columns: auto 1200px auto;
-  }
+footer {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". footer .";
 }
 footer > div {
-  display: grid;
-  gap: 24px;
+  grid-area: footer;
 }
-@media (min-width: 768px) {
-  footer > div {
-    grid-template-areas: "locations newsletter" "locations social";
-    grid-template-columns: 50% auto;
-  }
-}
-@media (min-width: 1024px) {
-  footer > div {
-    grid-template-areas: "locations newsletter social";
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1200px) {
-  footer > div {
-    grid-area: footer;
-  }
-}
-@media (min-width: 768px) {
-  footer > div #locations {
-    grid-area: locations;
-  }
-}
-@media (min-width: 768px) {
-  footer > div #newsletter {
-    grid-area: newsletter;
-  }
-}
-footer > div #newsletter form input {
-  border: none;
-}
-@media (min-width: 768px) {
-  footer > div #social {
-    grid-area: social;
-  }
-}
-footer > div #social ul {
-  border: none;
-}
+
 /* =============
     Search
 ============= */
 #search {
   display: grid;
-  grid-template-areas: ". search .";
   grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". search .";
 }
 #search > div {
   grid-area: search;
@@ -486,50 +430,39 @@ footer > div #social ul {
 /* =============
     Hero
 ============= */
-#hero > div img {
-  display: block;
+#hero img {
   width: 100%;
 }
-
-#planning > div ul {
+/* =============
+    Planning
+============= */
+#planning {
   display: grid;
-  gap: 16px;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". planning .";
 }
+#planning > div {
+  grid-area: planning;
+}
+
 /* =============
     Hero 2
 ============= */
-#hero-2 > div ul li {
-  background-position: center;
-  background-size: cover;
-  height: 320px;
-}
-#hero-2 > div ul #hero-2-1 {
-  background-image: url("../img/hero-2/hero-2-1.jpg");
-}
-#hero-2 > div ul #hero-2-2 {
-  background-image: url("../img/hero-2/hero-2-2.jpg");
-}
-#hero-2 > div ul #hero-2-3 {
-  background-image: url("../img/hero-2/hero-2-3.jpg");
-  display: none;
+#hero-2 img {
+  width: 100%;
 }
 
-#new > div ul {
+/* =============
+    New
+============= */
+#new ul li img {
+  width: 100%;
+}
+#new ul li section {
   display: grid;
-  gap: 16px;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". new-content .";
 }
-#new > div ul #new-gallery-1 > div {
-  background-image: url("../img/new/gallery-1.jpg");
-}
-#new > div ul #new-gallery-2 > div {
-  background-image: url("../img/new/gallery-2.jpg");
-}
-#new > div ul #new-gallery-3 > div {
-  background-image: url("../img/new/gallery-3.jpg");
-}
-#new > div ul #new-gallery-4 > div {
-  background-image: url("../img/new/gallery-4.jpg");
-}
-#new > div ul #new-gallery-5 > div {
-  background-image: url("../img/new/gallery-5.jpg");
+#new ul li section > div {
+  grid-area: new-content;
 }

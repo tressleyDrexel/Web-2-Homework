@@ -1,45 +1,26 @@
-#new {
+/* =============
+    New
+============= */
+#new{
+   
 
-	>div {
+    ul{
 
+        li{
 
-		ul {
-			display: grid;
-			gap: 16px;
-			
-			li {
+            img{
+                width: 100%;
+            }
 
-			}
-			#new-gallery-1 {
-			
-				>div {
-					background-image: url("../img/new/gallery-1.jpg");
-				}
-			}
-			#new-gallery-2 {
-				
-				>div {
-					background-image: url("../img/new/gallery-2.jpg");
-				}
-			}
-			#new-gallery-3 {
-				
-				>div {
-					background-image: url("../img/new/gallery-3.jpg");
-				}
-			}
-			#new-gallery-4 {
-				
-				>div {
-					background-image: url("../img/new/gallery-4.jpg");
-				}
-			}
-			#new-gallery-5 {
-				
-				>div {
-					background-image: url("../img/new/gallery-5.jpg");
-				}
-			}
-		}
-	}
+            section{
+                display: grid;
+                grid-template-columns: 16px auto 16px;
+                grid-template-areas: ". new-content .";
+                >div{
+                    grid-area: new-content;
+                }
+            }
+            
+        }
+    }
 }
