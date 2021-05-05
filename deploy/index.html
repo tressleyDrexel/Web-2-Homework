@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/23ff331e80.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+     <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/db8be9eca2.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/styles.css">
     <title>Homework Demo</title>
@@ -18,57 +18,70 @@
 <body>
 
     <header>
-        <section>
-            <img src="img/header/logo.jpg" alt="company logo">
-        </section>
+        <div>
+            <section>
+                <img src="img/header/logo.jpg" alt="company logo">
+            </section>
+        </div>
     </header>
-    <section>
+    <section id="search">
+            <div>
                 <form action="POST">
                    <input type="text" placeholder="Search our inventory">
                    <button><i class="fas fa-search"></i></button>
                 </form>
+            </div>
         </section>
-    <section>
+    <section id="hero" class="content">
+                <div>
                     <img src="img/hero/hero.jpg" alt="hero image">
                     <ul>
-                        <li>
+                        <li id="hero-item">
+                            <div></div>
                             <a href="#">
-                                <div>
-                                    <h2>2019 Morooka MST2200VDR </h2>
-                                    <p>Rotating Rubber Track Carrier</p>
-                                </div>
+                                <div class="hero-left">
+                                    <div>
+                                        <h2>2019 Morooka MST2200VDR </h2>
+                                        <p>Rotating Rubber Track Carrier</p>
+                                    </div>
                                     
-                                <div>
+                                </div>
+                                <div class="hero-right">
                                     <h5>Details</h5>
                                     <i class="fas fa-caret-right"></i>
                                 </div>
                             </a>
                         </li>
-                        <li>
+                        <li id="hero-location">
                             <a href="#">
-                                <div>
-                                        <p><span>Location:</span> South Easton, Mass, USA</p>
+                                <div class="hero-left">
+                                    <div>
+                                        <p id="location-top"><span>Location:</span> South Easton, Mass, USA</p>
                                         <p><span>Price:</span> Upon Request</p>
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="hero-right">
                                     <h5>Details</h5>
                                     <i class="fas fa-caret-right"></i>
                                 </div>
                             </a>
+                            <div></div>
                         </li>
                     </ul>
+                </div>
             </section>
-    <section>
+    <section id="planning" class="content">
+                    <div>
                         <ul>
                             <li>
                                 <section>
                                     <div>
                                         <h1>Planning your next lift?</h1>
-                                        <button>Start Here</button>
+                                        <button class="yellow-button">Start Here</button>
                                     </div>
                                 </section>
                                 <aside>
-                                    <img src="img/planning/planning-left.png" alt="crane hooke close-up">
+                                    <div id="planning-left"></div>
                                 </aside>
                                 
                             </li>
@@ -77,167 +90,171 @@
                                 <section>
                                     <div>
                                         <h1>Need Parts?</h1>
-                                        <button>Order Here</button>
+                                        <button class="yellow-button">Order Here</button>
                                     </div>
                                 </section>
                                 <aside>
-                                    <img src="img/planning/planning-right.png" alt="truck wheel close-up">
+                                    <div id="planning-right"></div>
                                 </aside>
                             </li>
                         </ul>
+                    </div>
                 </section>
-    <section>
-                        <ul>
-                            <li><img src="img/hero-2/hero-2-1.jpg" alt="front facing bulldozer"></li>
-                            <li><img src="img/hero-2/hero-2-2.jpg" alt="front facing excavator"></li>
-                            <li><img src="img/hero-2/hero-2-3.jpg" alt="front facing roller"></li>
-                        </ul>
+    <section id="hero-2" class="content">
+                        <div>
+                            <ul>
+                                <li id="hero-2-1"></li>
+                                <li id="hero-2-2"></li>
+                                <li id="hero-2-3"></li>
+                            </ul>
+                        </div>
                     </section>
-    <section>
+    <section id="new" class="content">
+                            <div>
                                 <h1>What's New</h1>
                         
                                 <ul>
                                     <li id="new-gallery-1">
-                                       <img src="img/new/gallery-1.jpg" alt="front view of machine">
+                                        <div></div>
                                         <section>
                                             <h1>New NBT60XL Hits the Market</h1>
                                             <p>Manitowoc’s product innovation continues, with the latest evolution in its National Crane product line hitting the market: the NBT60XL.</p>
-                                            <button>Read More</button>
+                                            <button class="yellow-button">Read More</button>
                                         </section>
                                     </li>
                         
                                     <li id="new-gallery-2">
-                                        <img src="img/new/gallery-2.jpg" alt="front view of crane">
+                                        <div></div>
                                         <section>
                                             <h1>NCCCO Course Offered</h1>
                                             <p>Shawmut Equipment, with New England Crane School, will be hosting test preparation and testing for the NCCCO certifications in October.</p>
-                                            <button>Read More</button>
+                                            <button class="yellow-button">Read More</button>
                                         </section>
                                     </li>
                         
                                     <li id="new-gallery-3">
-                                        <img src="img/new/gallery-3.jpg" alt="crane working on trees">
+                                        <div></div>
                                         <section>
                                             <h1>New Short Configuration</h1>
                                             <p>Shawmut is excited to introduce a new short configuration National NBT45127-1 boom truck developed as a collaboration between Shawmut and</p>
-                                            <button>Read More</button>
+                                            <button class="yellow-button">Read More</button>
                                         </section>
                                     </li>
                         
                                     <li id="new-gallery-4">
-                                        <img src="img/new/gallery-4.jpg" alt="rolling machine">
+                                        <div></div>
                                         <section>
                                             <h1>New Fallbach Tree Handler</h1>
                                             <p>Heavy-Duty Durable Tree Handler mounted on Compact GMK3060 Chassis For Sale & Immediately Available</p>
-                                            <button>Read More</button>
+                                            <button class="yellow-button">Read More</button>
                                         </section>
                                     </li>
                         
                                     <li id="new-gallery-5">
-                                        <img src="img/new/gallery-5.jpg" alt="crane stacking trees">
+                                        <div></div>
                                         <section>
                                             <h1>Finding Room in a Tight Space </h1>
                                             <p>Manitowoc’s product innovation continues, with the latest evolution in its National Crane product line hitting the market: the NBT60XL.</p>
-                                            <button>Read More</button>
+                                            <button class="yellow-button">Read More</button>
                                         </section>
                                     </li>
                                 </ul>
+                            </div>
                         </section>
     <footer>
-                                <section>
-                                    <h1>Locations</h1>
-                                    <section>
-                                        <h2>Connecticut</h2>
+                                <div>
+                                    <section id="locations">
+                                        <h1>Locations</h1>
+                                        <section>
+                                            <h2>Connecticut</h2>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <i class="far fa-location-arrow"></i>
+                                                    </div>
+                            
+                                                    <address>20 Tolland Turnpike<br>
+                                                        Manchester, CT 06042-1763</address>
+                                                </li>
+                            
+                                                <li>
+                                                    <div>
+                                                        <i class="far fa-mobile-android"></i>
+                                                    </div>
+                                                    <a href="tel:877-526-921">(877)-526-9213</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                            
+                                        <section>
+                                            <h2>Massachusetts</h2>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <i class="far fa-location-arrow"></i>
+                                                    </div>
+                                                    <address>136 Eastman Street South <br>
+                                                        Easton, MA 02375</address>
+                                                </li>
+                            
+                                                <li>
+                                                    <div>
+                                                        <i class="far fa-mobile-android"></i>
+                                                    </div>
+                                                    <a href="tel:877526-9213">(877)-526-9213</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                            
+                                        <section>
+                                            <h2>Nova Scotia</h2>
+                                            <ul id="nova">
+                                                <li>
+                                                    <div>
+                                                        <i class="far fa-location-arrow"></i>
+                                                    </div>
+                                                    <address>318 Park Road <br>
+                                                        Elmsdale, NS B2S 0G25</address>
+                                                </li>
+                            
+                                                <li>
+                                                    <div>
+                                                        <i class="far fa-mobile-android"></i>
+                                                    </div>
+                                                    <a href="tel:902883-7450">(902)-883-7450</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </section>
+                            
+                                    <section id="newsletter">
+                                        <h1>Newsletter Sign Up</h1>
+                                        <form action="POST">
+                                            <input type="text" placeholder="Email Address">
+                                            <button class="yellow-button">Sign Up</button>
+                                        </form>
+                                    </section>
+                            
+                                    <section id="social">
+                                        <h1>Follow Us</h1>
                                         <ul>
-                                            <li>
-                                                <div>
-                                                    <i class="far fa-location-arrow"></i>
-                                                </div>
-                            
-                                                <address>20 Tolland Turnpike<br>
-                                                    Manchester, CT 06042-1763</address>
-                                            </li>
-                            
-                                            <li>
-                                                <div>
-                                                    <i class="far fa-mobile-android"></i>
-                                                </div>
-                                                <a href="tel:877-526-921">(877)-526-9213</a>
-                                            </li>
+                                            <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
                                         </ul>
                                     </section>
-                            
-                                    <section>
-                                        <h2>Massachusetts</h2>
-                                        <ul>
-                                            <li>
-                                                <div>
-                                                    <i class="far fa-location-arrow"></i>
-                                                </div>
-                                                <address>136 Eastman Street South <br>
-                                                    Easton, MA 02375</address>
-                                            </li>
-                            
-                                            <li>
-                                                <div>
-                                                    <i class="far fa-mobile-android"></i>
-                                                </div>
-                                                <a href="tel:877526-9213">(877)-526-9213</a>
-                                            </li>
-                                        </ul>
-                                    </section>
-                            
-                                    <section>
-                                        <h2>Nova Scotia</h2>
-                                        <ul id="nova">
-                                            <li>
-                                                <div>
-                                                    <i class="far fa-location-arrow"></i>
-                                                </div>
-                                                <address>318 Park Road <br>
-                                                    Elmsdale, NS B2S 0G25</address>
-                                            </li>
-                            
-                                            <li>
-                                                <div>
-                                                    <i class="far fa-mobile-android"></i>
-                                                </div>
-                                                <a href="tel:902883-7450">(902)-883-7450</a>
-                                            </li>
-                                        </ul>
-                                    </section>
-                                </section>
-                            
-                                <section>
-                                    <h1>Newsletter Sign Up</h1>
-                                    <form action="POST">
-                                        <input type="text" placeholder="Email Address">
-                                        <button>Sign Up</button>
-                                    </form>
-                                </section>
-                            
-                                <section>
-                                    <h1>Follow Us</h1>
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                                    </ul>
-                                </section>
                                 </div>
                             </footer>
 
-     <!-- jQuery -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-     <!-- Greensock -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    
-     <script src="js/scripts-min.js"></script>
-
 </body>
 
+ <!-- jQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+ <!-- Greensock -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+ <script src="js/scripts-min.js"></script>
 
 </html>

@@ -1,0 +1,120 @@
+#new {
+	@include xl {
+		display: grid;
+		grid-template-areas: ". new .";
+		grid-template-columns: auto 1200px auto;
+	}
+
+	>div {
+		@include xl {
+			grid-area: new;
+		}
+
+		>h1 {
+			color: $stoneSilverDark;
+			font-size: rem-calc(20);
+			font-weight: 400;
+			margin-bottom: 16px;
+			padding: 0 16px;
+
+			@include md {
+				font-size: rem-calc(37);
+				font-weight: 300;
+			}
+		}
+
+		ul {
+			display: grid;
+			gap: 16px;
+
+			@include md {
+				grid-template-areas: "p1 p1 p2 p2"
+					"p3 p3 p4 p4"
+					". p5 p5 .";
+				grid-template-columns: repeat(4, 1fr);
+				padding: 0 16px;
+			}
+
+			@include lg {
+				grid-template-areas: "p1 p1 p2 p2 p3 p3"
+					". p4 p4 p5 p5 .";
+				grid-template-columns: repeat(6, 1fr);
+			}
+
+			li {
+				background-color: $brightStarLite;
+				box-shadow: 0px 1px 1px 0px rgba(42, 48, 54, .3);
+
+				>div {
+					background-position: center bottom;
+					background-size: cover;
+					height: 165px;
+				}
+
+				section {
+					padding: 16px;
+
+					h1 {
+						font-size: rem-calc(27);
+						font-weight: 600;
+						margin-bottom: 16px;
+					}
+
+					p {
+						margin-bottom: 16px;
+					}
+				}
+			}
+
+			#new-gallery-1 {
+				@include md {
+					grid-area: p1;
+				}
+
+				>div {
+					background-image: url("../img/new/gallery-1.jpg");
+				}
+			}
+
+			#new-gallery-2 {
+				@include md {
+					grid-area: p2;
+				}
+
+				>div {
+					background-image: url("../img/new/gallery-2.jpg");
+				}
+			}
+
+			#new-gallery-3 {
+				@include md {
+					grid-area: p3;
+				}
+
+				>div {
+					background-image: url("../img/new/gallery-3.jpg");
+				}
+			}
+
+			#new-gallery-4 {
+				@include md {
+					grid-area: p4;
+				}
+
+				>div {
+					background-image: url("../img/new/gallery-4.jpg");
+				}
+			}
+
+			#new-gallery-5 {
+				@include md {
+					grid-area: p5;
+				}
+
+				>div {
+					background-image: url("../img/new/gallery-5.jpg");
+				}
+			}
+		}
+	}
+}
