@@ -1,67 +1,46 @@
 /* =============
     Footer
 ============= */
-footer {
+footer{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". footer .";
 
-	@include xl {
-		display: grid;
-		grid-template-areas: ". footer .";
-		grid-template-columns: auto 1200px auto;
-	}
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+    >div{
+        grid-area: footer;
 
-	>div {
-		display: grid;
-		gap: 24px;
+        @include md{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "f1 f2"
+            "f1 f3";
+            gap: 16px;
+        }
 
-		@include md {
-			grid-template-areas: "locations newsletter"
-				"locations social";
-			grid-template-columns: 50% auto;
-		}
+        @include lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "f1 f2 f3";
+        }
 
-		@include lg {
-			grid-template-areas: "locations newsletter social";
-			grid-template-columns: repeat(3, 1fr);
-		}
+        #f1{
+            @include md{
+                grid-area: f1;
+            }
+        }
 
-		@include xl {
-			grid-area: footer;
-		}
+        #f2{
+            @include md{
+                grid-area: f2;
+            }
+        }
 
-
-		#locations {
-			@include md {
-				grid-area: locations;
-			}
-		}
-
-		#newsletter {
-			@include md {
-				grid-area: newsletter;
-			}
-
-			form {
-				input {
-					
-					border: none;
-				}
-			}
-		}
-
-		#social {
-			@include md {
-				grid-area: social;
-			}
-
-
-			ul {
-				border: none;
-
-				li {
-
-					
-				}
-			}
-		}
-	}
+        #f3{
+            @include md{
+                grid-area: f3;
+            }
+        }
+    }
 }

@@ -4,7 +4,7 @@
     {
       "name" : "Process All Remaining Files and Folders",
       "stepType" : 1,
-      "uuidString" : "FE684271-E5E7-4F92-8D90-165AAE1012A2"
+      "uuidString" : "A7CBDA7B-AA82-4FA0-AD95-EB4A5966B0EA"
     }
   ],
   "creatorBuild" : "34127",
@@ -172,6 +172,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/planning\/planning-left.png" : {
+      "ft" : 32768,
+      "iS" : 20481,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/planning\/planning-left.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/img\/planning\/planning-right.jpg" : {
       "ft" : 16384,
       "iS" : 10265,
@@ -181,6 +194,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/planning\/planning-right.png" : {
+      "ft" : 32768,
+      "iS" : 24324,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/planning\/planning-right.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -270,8 +296,8 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dev\/index.html",
-      "oF" : 0
+      "oAP" : "\/deploy\/index.html",
+      "oF" : 2
     },
     "\/dev\/js\/scripts.js" : {
       "bF" : 0,
@@ -279,8 +305,8 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/dev\/js\/scripts-min.js",
-      "oF" : 0,
+      "oAP" : "\/deploy\/js\/scripts-min.js",
+      "oF" : 2,
       "sC" : 3,
       "tS" : 0
     },
@@ -502,8 +528,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/dev\/scss\/styles.css",
-      "oF" : 0,
+      "oAP" : "\/deploy\/css\/styles.css",
+      "oF" : 2,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -516,11 +542,11 @@
 
   },
   "projectAttributes" : {
-    "creationDate" : 638646927.49306905,
+    "creationDate" : 640371835.02114797,
     "displayValue" : "Web-2-Homework",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "meme-chloe",
-    "iconImageWasSetByUser" : 1
+    "iconImageName" : "brackets-cafe",
+    "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

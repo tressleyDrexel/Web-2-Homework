@@ -144,8 +144,8 @@ html {
 // }
 
 
-@mixin xl-hero-2 {
-    @media (min-width: #{$screen-xl-hero-2-min}) {
+@mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) {
         @content;
     }
 }

@@ -1,12 +1,32 @@
 /* =============
     Hero
 ============= */
-#hero {
-	>div {
-		img {
-			display: block;
-			width: 100%;
-		}
-		
-	}
+#hero{
+    img{
+        width: 100%;
+    }
+
+    section{
+        @include md{
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". hero-content .";
+            ul{
+                @include md{
+                    grid-area: hero-content;
+                    display: grid;
+                    grid-template-columns: 40% auto;
+                }
+
+                @include lg{
+                    grid-template-columns: 50% auto;
+                }
+
+
+                li{
+                        
+                }
+            }
+        }
+    }
 }

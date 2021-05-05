@@ -1,45 +1,91 @@
-#new {
+/* =============
+    New
+============= */
+#new{
 
-	>div {
+    @include md{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". new .";
+    }
 
+    @include lg{
+        grid-template-columns: auto 1024px auto;
+    }
+   
+    >div{
 
-		ul {
-			display: grid;
-			gap: 16px;
-			
-			li {
+        @include md{
+            grid-area: new;
+        }
 
-			}
-			#new-gallery-1 {
-			
-				>div {
-					background-image: url("../img/new/gallery-1.jpg");
-				}
-			}
-			#new-gallery-2 {
-				
-				>div {
-					background-image: url("../img/new/gallery-2.jpg");
-				}
-			}
-			#new-gallery-3 {
-				
-				>div {
-					background-image: url("../img/new/gallery-3.jpg");
-				}
-			}
-			#new-gallery-4 {
-				
-				>div {
-					background-image: url("../img/new/gallery-4.jpg");
-				}
-			}
-			#new-gallery-5 {
-				
-				>div {
-					background-image: url("../img/new/gallery-5.jpg");
-				}
-			}
-		}
-	}
+        h1{
+
+        }
+
+        ul{
+
+            @include md{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas: "n1 n1 n2 n2"
+                "n3 n3 n4 n4"
+                ". n5 n5 .";
+                gap: 16px;
+            }
+
+            @include lg{
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-areas: 
+                "n1 n1 n2 n2 n3 n3"
+                ". n4 n4 n5 n5 .";
+            }
+    
+            li{
+    
+                img{
+                    width: 100%;
+                }
+    
+                section{
+                    display: grid;
+                    grid-template-columns: 16px auto 16px;
+                    grid-template-areas: ". new-content .";
+                    >div{
+                        grid-area: new-content;
+                    }
+                }
+            }
+
+            #n1{
+                @include md{
+                    grid-area: n1;
+                }
+            }
+
+            #n2{
+                @include md{
+                    grid-area: n2;
+                }
+            }
+
+            #n3{
+                @include md{
+                    grid-area: n3;
+                }
+            }
+
+            #n4{
+                @include md{
+                    grid-area: n4;
+                }
+            }
+
+            #n5{
+                @include md{
+                    grid-area: n5;
+                }
+            }
+        }
+    }
 }
