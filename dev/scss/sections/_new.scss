@@ -1,45 +1,139 @@
-#new {
+/* =============
+    New
+============= */
+#new{
 
-	>div {
+    @include md{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". new .";
+    }
 
+    @include lg{
+        grid-template-columns: auto 1024px auto;
+    }
+   
+    >div{
 
-		ul {
-			display: grid;
-			gap: 16px;
-			
-			li {
+        @include md{
+            grid-area: new;
+        }
 
+        >h1{
+            color: $stoneSilverDark;
+			font-size: rem-calc(20);
+			font-weight: 400;
+			margin-bottom: 16px;
+			padding: 0 16px;
+			@include md {
+				font-size: rem-calc(37);
+				font-weight: 300;
 			}
-			#new-gallery-1 {
-			
-				>div {
+        }
+
+        ul{
+
+            @include md{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas: "n1 n1 n2 n2"
+                "n3 n3 n4 n4"
+                ". n5 n5 .";
+                gap: 16px;
+            }
+
+            @include lg{
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-areas: 
+                "n1 n1 n2 n2 n3 n3"
+                ". n4 n4 n5 n5 .";
+            }
+    
+            li{
+                background-color: $brightStarLite;
+                box-shadow: 0px 1px 1px 0px rgba(42, 48, 54, .3);
+    
+                // img{
+                //     width: 100%;
+                // }
+
+                >div {
+					background-position: center bottom;
+					background-size: cover;
+					height: 165px;
+
+                    @include md{
+                        height: 180px;
+                    }
+
+                    @include lg{
+                        height: 160px;
+                    }
+				}
+    
+                section{
+                    display: grid;
+                    grid-template-columns: 16px auto 16px;
+                    grid-template-areas: ". new-content .";
+                    >div{
+                        padding: 16px;
+                        grid-area: new-content;
+                        h1 {
+                            font-size: rem-calc(27);
+                            font-weight: 600;
+                            margin-bottom: 16px;
+                        }
+                        p {
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+
+            #n1{
+                @include md{
+                    grid-area: n1;
+                }
+                >div {
 					background-image: url("../img/new/gallery-1.jpg");
 				}
-			}
-			#new-gallery-2 {
-				
-				>div {
+            }
+
+            #n2{
+                @include md{
+                    grid-area: n2;
+                }
+                >div {
 					background-image: url("../img/new/gallery-2.jpg");
 				}
-			}
-			#new-gallery-3 {
-				
-				>div {
+            }
+
+            #n3{
+                @include md{
+                    grid-area: n3;
+                }
+                >div {
 					background-image: url("../img/new/gallery-3.jpg");
 				}
-			}
-			#new-gallery-4 {
-				
-				>div {
+            }
+
+            #n4{
+                @include md{
+                    grid-area: n4;
+                }
+                >div {
 					background-image: url("../img/new/gallery-4.jpg");
 				}
-			}
-			#new-gallery-5 {
-				
-				>div {
+            }
+
+            #n5{
+                @include md{
+                    grid-area: n5;
+                }
+                >div {
 					background-image: url("../img/new/gallery-5.jpg");
 				}
-			}
-		}
-	}
+            }
+        }
+    }
 }
