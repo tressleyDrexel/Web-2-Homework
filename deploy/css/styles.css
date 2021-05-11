@@ -352,6 +352,18 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
 /* =============
     Typography
 ============= */
@@ -360,6 +372,19 @@ template {
 ============= */
 button {
   cursor: pointer;
+}
+
+.yellow-button {
+  background-color: #FFD205;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.25s;
+}
+.yellow-button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 /* =============
@@ -383,27 +408,17 @@ textarea {
 /* =============
     Navigation
 ============= */
-a {
-  text-decoration: none;
-  transition: 0.25s;
-}
-
 /* =============
     Header
 ============= */
 header {
   display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header .";
+  background-color: #2A3036;
 }
-@media (min-width: 1200px) {
-  header {
-    grid-template-areas: ". header .";
-    grid-template-columns: auto 1200px auto;
-  }
-}
-@media (min-width: 1200px) {
-  header > div {
-    grid-area: header;
-  }
+header > div {
+  grid-area: header;
 }
 header > div section img {
   width: 96px;
@@ -422,32 +437,33 @@ header > div section img {
 /* =============
     Footer
 ============= */
+footer {
+  background-color: #2A3036;
+  color: #C8C7BC;
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". footer .";
+}
 @media (min-width: 1200px) {
   footer {
-    display: grid;
-    grid-template-areas: ". footer .";
     grid-template-columns: auto 1200px auto;
   }
 }
 footer > div {
-  display: grid;
-  gap: 24px;
+  grid-area: footer;
 }
 @media (min-width: 768px) {
   footer > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "locations newsletter" "locations social";
-    grid-template-columns: 50% auto;
+    gap: 16px;
   }
 }
 @media (min-width: 1024px) {
   footer > div {
-    grid-template-areas: "locations newsletter social";
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1200px) {
-  footer > div {
-    grid-area: footer;
+    grid-template-areas: "locations newsletter social";
   }
 }
 @media (min-width: 768px) {
@@ -461,75 +477,341 @@ footer > div {
   }
 }
 footer > div #newsletter form input {
+  background-color: #ADB5BD;
   border: none;
+}
+footer > div #newsletter form input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #2A3036;
+  /* Firefox */
+  opacity: 1;
+}
+footer > div #newsletter form input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #2A3036;
+}
+footer > div #newsletter form input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #2A3036;
 }
 @media (min-width: 768px) {
   footer > div #social {
     grid-area: social;
   }
 }
-footer > div #social ul {
-  border: none;
-}
+
 /* =============
     Search
 ============= */
 #search {
   display: grid;
-  grid-template-areas: ". search .";
   grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". search .";
+  background-color: #F8F9FA;
 }
 #search > div {
   grid-area: search;
+}
+@media (min-width: 1200px) {
+  #search > div {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". search-content .";
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  #search > div form {
+    grid-area: search-content;
+  }
+}
+@media (min-width: 1200px) {
+  #search > div form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #93A8AC;
+    color: #93A8AC;
+  }
+  #search > div form input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #93A8AC;
+    /* Firefox */
+    opacity: 1;
+  }
+  #search > div form input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #93A8AC;
+  }
+  #search > div form input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #93A8AC;
+  }
+}
+@media (min-width: 1200px) {
+  #search > div form button {
+    background-color: #FFD205;
+    border: none;
+    border-radius: 3.5px;
+  }
+  #search > div form buttonhover {
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 /* =============
     Hero
 ============= */
-#hero > div img {
-  display: block;
+#hero img {
   width: 100%;
 }
-
-#planning > div ul {
-  display: grid;
-  gap: 16px;
+@media (min-width: 768px) {
+  #hero section ul {
+    grid-area: hero-content;
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
 }
+@media (min-width: 1024px) {
+  #hero section ul {
+    grid-template-columns: 50% auto;
+  }
+}
+#hero section ul li a:link,
+#hero section ul li a:visited {
+  color: #000;
+  transition: 0.25s;
+}
+#hero section ul li a:link:hover, #hero section ul li a:link:active,
+#hero section ul li a:visited:hover,
+#hero section ul li a:visited:active {
+  background-color: #000;
+  color: #fff;
+}
+#hero section ul #product {
+  background-color: #E2BA06;
+}
+@media (min-width: 1200px) {
+  #hero section ul #product {
+    display: grid;
+    grid-template-columns: auto 600px;
+    grid-template-areas: ". product";
+  }
+}
+@media (min-width: 1200px) {
+  #hero section ul #product a {
+    grid-area: product;
+  }
+}
+#hero section ul #location {
+  background-color: #FFD205;
+}
+@media (min-width: 1200px) {
+  #hero section ul #location {
+    display: grid;
+    grid-template-columns: 600px auto;
+    grid-template-areas: "location .";
+  }
+}
+@media (min-width: 1200px) {
+  #hero section ul #location a {
+    grid-area: location;
+  }
+}
+
+/* =============
+    Planning
+============= */
+#planning {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". planning .";
+}
+@media (min-width: 1200px) {
+  #planning {
+    grid-template-columns: auto 1000px auto;
+  }
+}
+#planning > div {
+  grid-area: planning;
+}
+@media (min-width: 768px) {
+  #planning > div ul {
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap: 16px;
+  }
+}
+#planning > div ul li {
+  background-color: #E0DFD5;
+}
+
 /* =============
     Hero 2
 ============= */
-#hero-2 > div ul li {
+@media (min-width: 1350px) {
+  #hero-2 {
+    display: grid;
+    grid-template-columns: auto 1350px auto;
+    grid-template-areas: ". hero-2 .";
+  }
+}
+@media (min-width: 768px) {
+  #hero-2 ul {
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
+}
+@media (min-width: 1200px) {
+  #hero-2 ul {
+    grid-template-columns: 70% auto;
+    grid-template-areas: "h2-1 h2-2" "h2-1 h2-3";
+    grid-template-rows: repeat(2, 300px);
+  }
+}
+@media (min-width: 1350px) {
+  #hero-2 ul {
+    grid-area: hero-2;
+  }
+}
+#hero-2 ul li {
   background-position: center;
   background-size: cover;
   height: 320px;
 }
-#hero-2 > div ul #hero-2-1 {
+@media (min-width: 768px) {
+  #hero-2 ul li {
+    height: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  #hero-2 ul li {
+    height: auto;
+  }
+}
+#hero-2 ul #h2-1 {
   background-image: url("../img/hero-2/hero-2-1.jpg");
 }
-#hero-2 > div ul #hero-2-2 {
+@media (min-width: 1200px) {
+  #hero-2 ul #h2-1 {
+    grid-area: h2-1;
+  }
+}
+#hero-2 ul #h2-2 {
   background-image: url("../img/hero-2/hero-2-2.jpg");
 }
-#hero-2 > div ul #hero-2-3 {
+@media (min-width: 1200px) {
+  #hero-2 ul #h2-2 {
+    grid-area: h2-2;
+  }
+}
+#hero-2 ul #h2-3 {
   background-image: url("../img/hero-2/hero-2-3.jpg");
   display: none;
 }
-
-#new > div ul {
-  display: grid;
-  gap: 16px;
+@media (min-width: 1200px) {
+  #hero-2 ul #h2-3 {
+    display: block;
+    grid-area: h2-3;
+  }
 }
-#new > div ul #new-gallery-1 > div {
+
+/* =============
+    New
+============= */
+@media (min-width: 768px) {
+  #new {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". new .";
+  }
+}
+@media (min-width: 1024px) {
+  #new {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+@media (min-width: 768px) {
+  #new > div {
+    grid-area: new;
+  }
+}
+@media (min-width: 768px) {
+  #new > div ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "n1 n1 n2 n2" "n3 n3 n4 n4" ". n5 n5 .";
+    gap: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  #new > div ul {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "n1 n1 n2 n2 n3 n3" ". n4 n4 n5 n5 .";
+  }
+}
+#new > div ul li {
+  background-color: #F8F9FA;
+}
+#new > div ul li > div {
+  background-position: center bottom;
+  background-size: cover;
+  height: 165px;
+}
+@media (min-width: 768px) {
+  #new > div ul li > div {
+    height: 180px;
+  }
+}
+@media (min-width: 1024px) {
+  #new > div ul li > div {
+    height: 160px;
+  }
+}
+#new > div ul li section {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". new-content .";
+}
+#new > div ul li section > div {
+  grid-area: new-content;
+}
+@media (min-width: 768px) {
+  #new > div ul #n1 {
+    grid-area: n1;
+  }
+}
+#new > div ul #n1 > div {
   background-image: url("../img/new/gallery-1.jpg");
 }
-#new > div ul #new-gallery-2 > div {
+@media (min-width: 768px) {
+  #new > div ul #n2 {
+    grid-area: n2;
+  }
+}
+#new > div ul #n2 > div {
   background-image: url("../img/new/gallery-2.jpg");
 }
-#new > div ul #new-gallery-3 > div {
+@media (min-width: 768px) {
+  #new > div ul #n3 {
+    grid-area: n3;
+  }
+}
+#new > div ul #n3 > div {
   background-image: url("../img/new/gallery-3.jpg");
 }
-#new > div ul #new-gallery-4 > div {
+@media (min-width: 768px) {
+  #new > div ul #n4 {
+    grid-area: n4;
+  }
+}
+#new > div ul #n4 > div {
   background-image: url("../img/new/gallery-4.jpg");
 }
-#new > div ul #new-gallery-5 > div {
+@media (min-width: 768px) {
+  #new > div ul #n5 {
+    grid-area: n5;
+  }
+}
+#new > div ul #n5 > div {
   background-image: url("../img/new/gallery-5.jpg");
 }

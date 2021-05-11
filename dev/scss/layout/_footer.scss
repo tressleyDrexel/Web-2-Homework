@@ -1,67 +1,72 @@
 /* =============
     Footer
 ============= */
-footer {
+footer{
+    background-color: $nightDark;
+	color: $alpineFrostDark;
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". footer .";
 
-	@include xl {
-		display: grid;
-		grid-template-areas: ". footer .";
-		grid-template-columns: auto 1200px auto;
-	}
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+    >div{
+        grid-area: footer;
 
-	>div {
-		display: grid;
-		gap: 24px;
+        @include md{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "locations newsletter"
+            "locations social";
+            gap: 16px;
+        }
 
-		@include md {
-			grid-template-areas: "locations newsletter"
-				"locations social";
-			grid-template-columns: 50% auto;
-		}
+        @include lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "locations newsletter social";
+        }
 
-		@include lg {
-			grid-template-areas: "locations newsletter social";
-			grid-template-columns: repeat(3, 1fr);
-		}
+        #locations{
+            @include md{
+                grid-area: locations;
+            }
+        }
 
-		@include xl {
-			grid-area: footer;
-		}
-
-
-		#locations {
-			@include md {
-				grid-area: locations;
-			}
-		}
-
-		#newsletter {
-			@include md {
-				grid-area: newsletter;
-			}
-
-			form {
+        #newsletter{
+            @include md{
+                grid-area: newsletter;
+            }
+            form {
 				input {
-					
+					background-color: $brightStarDark;
 					border: none;
+
+
+					&::placeholder {
+						/* Chrome, Firefox, Opera, Safari 10.1+ */
+						color: $nightDark;
+						/* Firefox */
+						opacity: 1;
+					}
+
+					&:-ms-input-placeholder {
+						/* Internet Explorer 10-11 */
+						color: $nightDark;
+					}
+
+					&::-ms-input-placeholder {
+						/* Microsoft Edge */
+						color: $nightDark;
+					}
 				}
 			}
-		}
+        }
 
-		#social {
-			@include md {
-				grid-area: social;
-			}
-
-
-			ul {
-				border: none;
-
-				li {
-
-					
-				}
-			}
-		}
-	}
+        #social{
+            @include md{
+                grid-area: social;
+            }
+        }
+    }
 }

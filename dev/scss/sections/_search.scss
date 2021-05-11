@@ -1,12 +1,58 @@
 /* =============
     Search
 ============= */
-#search {
-	display: grid;
-	grid-template-areas: ". search .";
-	grid-template-columns: 16px auto 16px;
+#search{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". search .";
+    background-color: $brightStarLite;
+    >div{
+        grid-area: search;
+        @include xl{
+            display: grid;
+            grid-template-columns: auto 1200px auto;
+            grid-template-areas: ". search-content .";
 
-	>div {
-		grid-area: search;
-	}
+            form{
+                @include xl{
+                    grid-area: search-content;
+                }
+
+                input{
+                    background-color: transparent;
+				    border: none;
+                    border-bottom: 1px solid $stoneSilver;
+				    color: $stoneSilver;
+
+                    &::placeholder {
+                        /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        color: $stoneSilver;
+                        /* Firefox */
+                        opacity: 1;
+                    }
+    
+                    &:-ms-input-placeholder {
+                        /* Internet Explorer 10-11 */
+                        color: $stoneSilver;
+                    }
+    
+                    &::-ms-input-placeholder {
+                        /* Microsoft Edge */
+                        color: $stoneSilver;
+                    }
+                }
+
+                button {
+                    background-color: $electricYellow;
+                    border: none;
+                    border-radius: 3.5px;
+    
+                    &hover {
+                        background-color: $black;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,22 +1,16 @@
 /* =============
     Header
 ============= */
-header {
-	display: grid;
+header{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". header .";
+    background-color: $nightDark;
+    >div{
+        grid-area: header;
 
-	@include xl {
-		grid-template-areas: ". header .";
-		grid-template-columns: auto 1200px auto;
-	}
-
-	>div {
-		@include xl {
-			grid-area: header;
-		}
-
-		section {
-			
-
+        section {
+		
 			img {
 				width: 96px;
 
@@ -29,5 +23,5 @@ header {
 				}
 			}
 		}
-	}
+    }
 }
