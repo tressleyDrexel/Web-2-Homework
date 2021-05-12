@@ -2,11 +2,102 @@
     Hero
 ============= */
 #hero {
-	>div {
-		img {
-			display: block;
-			width: 100%;
-		}
-		
-	}
+    img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    section {
+
+        ul {
+
+            @include md {
+                grid-area: hero-content;
+                display: grid;
+                grid-template-columns: 40% auto;
+            }
+
+            @include lg {
+                grid-template-columns: 50% auto;
+            }
+
+
+            li {
+
+                a:link,
+                a:visited {
+                    color: $black;
+                    transition: 0.25s;
+                    padding: 16px;
+					transition: 0.25s;
+                    display: flex;
+
+					@include md{
+						padding: 24px 16px;
+					}
+
+					@include md{
+						padding: 16px;
+					}
+
+                    &:hover,
+                    &:active {
+                        background-color: $black;
+                        color: $white;
+                    }
+
+
+					.hero-right {
+						align-items: center;
+						display: flex;
+						margin-left: auto;
+						font-size: rem-calc(18);
+
+						h5{
+							margin-right: 10px;
+							display: none;
+						
+							@include lg{
+								display: block;
+							}
+						}
+					}
+                }
+            }
+
+            #product{
+                background-color: $electricYellowDark;
+
+                @include xl{
+                    display: grid;
+                    grid-template-columns: auto 600px;
+                    grid-template-areas: ". product";
+                }
+
+                a{
+                    @include xl{
+                        grid-area: product;
+                    }
+                }
+            }
+
+            #location{
+                background-color: $electricYellow;
+
+                @include xl{
+                    display: grid;
+                    grid-template-columns: 600px auto ;
+                    grid-template-areas: "location .";
+                }
+
+                a{
+                    @include xl{
+                        grid-area: location;
+                    }
+                }
+
+            }
+        }
+    }
 }
